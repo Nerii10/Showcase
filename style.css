@@ -9,10 +9,9 @@
     text-align: center;
     text-shadow: 0px 0px 5px gray;
     font-size: 50px;
-    animation: start ease-in-out 0.5s;
+    animation: start ease-in-out 0.5s, typing 0.5s;
     transition: color 0.3s, font-size 0.4s, text-shadow 0.5s;
 }
-
 
 .Box1 {
     position: absolute;
@@ -21,6 +20,7 @@
     box-shadow: 0px 0px 10px #2e2e2e;
     margin-left: -8px;
     display: flex;
+    transition: background-color 2s;
     background-color: #2e2e2e;
 }
 .SWORD
@@ -29,11 +29,6 @@
     margin: 0 auto;
     width:500px;
     font-size:10px;
-}
-.img1 {
-    width: 500px;
-    border-radius: 33px 33px;
-    box-shadow: 0px 0px 10px 0px #111111;
 }
 a
 {
@@ -47,7 +42,9 @@ a
     font-size: 10px;
     animation: start ease-in-out 1s;
 }
-
+.Box1:hover {
+    background-color: #5c5c5c;
+}
 .border {
     box-shadow: 0px 0px 10px 1px #5c5c5c;
     background-color: #5c5c5c;
@@ -58,10 +55,25 @@ a
 .main:hover
 {
     text-shadow: 0px 0px 10px #bdf9ff;
-    font-size: 65px;
+    font-size: 52.5px;
     color: #6aedff;
     
 }
+
+.img1 {
+    width: 500px;
+    border-radius: 33px 33px;
+    box-shadow: 0px 0px 10px 0px #111111;
+    transition: width 0.3s, margin-left 0.3s ;
+}
+
+.img1:hover
+{
+    width:512.5px;
+    margin-left:-6.25px;
+}
+
+
 
 @keyframes start
 {
