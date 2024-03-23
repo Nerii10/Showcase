@@ -33,7 +33,7 @@
     box-shadow: 0px 0px 10px #2e2e2e;
     margin-left: -8px;
     display: flex;
-    transition: background-color 4s, box-shadow 4s;
+    transition: background-color 2s;
     background-color: #2e2e2e;
 }
 .SWORD
@@ -64,8 +64,7 @@ a
     animation: start ease-in-out 1s;
 }
 .Box1:hover {
-    background-color: #013b58;
-    box-shadow: 0px 0px 20px #013b58;
+    background-color: #5c5c5c;
 }
 .border {
     box-shadow: 0px 0px 10px 1px #5c5c5c;
