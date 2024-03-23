@@ -1,3 +1,74 @@
 <link rel="stylesheet" href="style.css" />
 
-<h1> placeholder <h1>
+
+<style>
+body
+{
+    background-color:#191919;
+}
+    .type {
+        color: gray;
+        background-color: #191919;
+        z-index: 2;
+        width: 550px;
+        height: 110px;
+        position: absolute;
+        align-items: center;
+        justify-content: left;
+        display: flex;
+        position: center;
+        animation-name: type;
+        animation-duration: 2s;
+        animation-timing-function: steps(18, start);
+        animation-fill-mode: forwards;
+    }
+    .type2 {
+        background-color: orange;
+        width: 5px;
+        height: 70px;
+        animation-name:blink;
+        animation-duration: 0.5s;
+        animation-iteration-count:infinite;
+        animation-direction: alternate;
+   
+    }
+
+
+@keyframes blink {
+    from {
+        opacity:0;
+    }
+
+    to {
+        opacity: 1;
+    }
+    }
+@keyframes type
+{
+    from {
+        margin-left: 0px
+    }
+   to
+   {
+       margin-left: 1060px
+
+   }
+ 
+}
+</style>
+
+<center>
+
+    <div style="height: 100%; align-items: center; justify-content: center; display: flex; position: center; width:100%"</div>
+
+    <div class="type">
+        <div class="type2">
+
+        </div>
+    </div>
+    <h1 style="font-size: 80px; position: absolute; "> placeholder. </h1>
+
+    </div>
+
+</center>
+
