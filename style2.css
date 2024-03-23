@@ -76,15 +76,16 @@ a
 }
 .main2 {
     margin: 0 auto;
-    text-align:center;
-    justify-content:center;
-    align-content:center;
-    width:100%;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
     margin-left: -8px;
     height: 200px;
+    box-shadow: 0px 0px 10px 0px #151515;
     background-color: #151515;
-    display:flex;
-    position:absolute;
+    display: flex;
+    position: absolute;
     text-shadow: 0px 0px 2px gray;
     font-size: 10px;
 }
@@ -123,6 +124,33 @@ a
 .site {
     animation: start 0.5s;
 }
+.elo
+{
+    display: flex;
+    
+    width: 500px;
+    height:500px;
+    z-index: 5;
+
+    position: absolute;
+    display: flex;
+    animation-name: rot;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rot
+{
+    from 
+    {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+
+
 
 @keyframes start {
     from {
@@ -151,3 +179,4 @@ a
         opacity: 100%
     }
 }
+
