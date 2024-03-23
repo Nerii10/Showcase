@@ -24,6 +24,7 @@ a
     font-size:20px;
     margin-left: 20px;
     margin-top: 30px;
+ 
 }
 
 .End {
@@ -166,7 +167,7 @@ a
     from {opacity:0%}
     to {opacity:100%}
 
-    from{margin-top: -200px}
+    from{margin-top: -20px}
     to {margin-top: 0px}
 
    
