@@ -1,6 +1,7 @@
 body {
     background-color: white;
     font-family:Consolas;
+     animation:start 0.25s;
 }
 
 .nav {
@@ -69,4 +70,12 @@ body {
     padding-left:12px;
     background-color: #ffd5a1;
     width: 100%
+}
+
+@keyframes start
+{
+    from {opacity:0%}
+    to {opacity:100%}
+
+  
 }
