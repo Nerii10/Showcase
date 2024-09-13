@@ -1,6 +1,6 @@
 ﻿body
 {
-    background-color: #0d0d0d;
+    background-color:  #0d0d0d;
     font-family:Consolas;
     color: white;
 
@@ -55,7 +55,7 @@ a
     box-shadow: 0px 0px 10px #2e2e2e;
     margin-left: -8px;
     display: flex;
-    transition: background-color 2s;
+    transition: background-color 0.2s;
     background-color: #2e2e2e;
 }
 .SWORD
@@ -96,7 +96,9 @@ a
     box-shadow: 0px 0px 10px 1px #5c5c5c;
     background-color: #5c5c5c;
     width: 120px;
-    border-radius:44px 1px;
+    transition: padding 0.3s;
+    transition-timing-function::cubic-bezier(0.215, 0.610, 0.355, 1);
+    border-radius:44px 44px;
     margin: 0 auto;
 }
 .main:hover
@@ -208,4 +210,9 @@ a
     to {
         opacity: 100%
     }
+}
+
+.border:hover
+{
+    padding-inline: 20px;
 }
