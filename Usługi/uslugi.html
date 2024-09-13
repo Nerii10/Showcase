@@ -1,0 +1,62 @@
+<html>
+<link rel="stylesheet" href="csscss.css">
+<div class="image">
+    <center>
+        <img src="nap.png" class="image" />
+    </center>
+</div>
+<body onload="licz()"></body>
+<head>
+    <script>
+        function licz() {
+            var a = document.getElementById("x").value;
+            var b = document.getElementById("y").value;
+            var pp=a*b;
+            var koszt = pp*8;
+          
+            document.getElementById("wynik1").innerHTML = "Powierzchnia Całkowita: " + pp;
+            document.getElementById("wynik2").innerHTML = "Koszt Malowania: " + koszt + "zł";
+        }
+    </script>
+
+    <script>
+        function fun() {
+            document.getElementById("result").innerHTML = "The function fun() is triggered !";
+        }
+    </script>
+</head>
+
+<div class="nav">
+    <a href="index.html" class="n">O NAS</a>
+    <a href="kontakt.html" class="k">KONTAKT</a>
+    <a href="uslugi.html" class="kk">KALKULATOR</a>
+    <a href="https://www.jakremontowac.pl" class="p" target="_blank">POLECANE STRONY</a>
+</div>
+<div class="main">
+    <br>
+    <br>
+  
+
+    <h1>Malowanie pokoju: 8zł za metr</h1>
+    
+    <form action="…">
+        <a>Wymiary pokoju w metrach</a>
+        <input type="number" id="x">
+        <input type="number" id="y">
+    </form>
+
+    <button class="butt" onclick="licz()">Koszt</button>
+
+    <p id="wynik1"></p>
+    <p id="wynik2"></p>
+
+
+</div>
+
+
+
+
+<h1 class="bottom">Autor Strony: mikolaj kozak</h1>
+
+
+</html>

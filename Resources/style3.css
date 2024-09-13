@@ -97,7 +97,7 @@ a
     background-color: #5c5c5c;
     width: 120px;
     transition: padding 0.3s;
-    transition-timing-function::cubic-bezier(0.215, 0.610, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
     border-radius:44px 44px;
     margin: 0 auto;
 }
@@ -191,28 +191,91 @@ a
     margin-left: -100px;
 }
 
+
+@keyframes movement 
+{
+    from {margin-top:5%;}
+    to {margin-top:20%;}
+
+    from {margin-left:-15%;}
+    to {margin-left:100%;}
+
+
+    from{ box-shadow: 0px 0px 55px 1px #b2cbe1;}
+    to{ box-shadow: 0px 0px 25px 1px #b2cbe1;;}
+}
+
+
 @keyframes start
 {
-    from {opacity:0%}
-    to {opacity:100%}
+    from {opacity:0%;}
+    to {opacity:100%;}
 
-    from{margin-top: -20px}
-    to {margin-top: 0px}
+    from{margin-top: -20px;}
+    to {margin-top: 0px;}
 
    
 }
 
 @keyframes maina {
     from {
-        opacity: 0%
+        opacity: 0%;
     }
 
     to {
-        opacity: 100%
+        opacity: 100%;
     }
 }
+
+
+
+
 
 .border:hover
 {
     padding-inline: 20px;
+}
+
+.dot
+{
+    box-shadow: 0px 0px 55px 1px blue;
+    z-index: -2;
+    position: fixed;
+    height: 250px;
+    width:  250px;
+    background-color: #b2cbe1;;
+    border-radius: 50%;
+    display: inline-block;
+    animation: movement ease-in-out 15s;
+    animation-iteration-count: infinite;
+    animation-fill-mode:both;
+    animation-direction: alternate;
+}
+
+.dot2
+{
+    margin: 50px;
+    box-shadow: 0px 0px 55px 1px black;
+    z-index: -2;
+    position: fixed;
+    height: 50px;
+    width:   50px;
+    background-color: #263335;
+    border-radius: 50%;
+    display: inline-block;
+    
+}
+
+
+.dot3
+{
+    margin: 150px;
+    box-shadow: 0px 0px 55px 1px black;
+    z-index: -2;
+    position: fixed;
+    height: 30px;
+    width:   30px;
+    background-color: #263335;
+    border-radius: 50%;
+    display: inline-block;
 }

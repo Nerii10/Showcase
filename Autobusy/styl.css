@@ -1,0 +1,107 @@
+﻿body {
+    font-family: Arial;
+    color: white;
+    font-size: 20px;
+    background-color: #dddddd;
+    animation:start 0.25s;
+}
+.img {
+    height: 300px;
+    border-radius: 55px;
+    box-shadow: 0px 0px 10px #343434;
+}
+
+.BT {
+    text-shadow: 0px 0px 10px #343434;
+    color: #ee6c5f;
+    margin-right: 50px;
+}
+.TT {
+    text-shadow: 0px 0px 10px #343434;
+    color: White;
+    text-align:center;
+    margin-right: 50px;
+}
+.Main {
+    position:fixed;
+    margin-left: 30%;
+    z-index: -100;
+    text-align:center;
+    margin-top:0px;
+    color:black;
+    background-color: #dddddd;
+    width: 50%;
+    height: 100%;
+}
+.Shadow 
+{
+    box-shadow: 0px 0px 5px 1px black;
+}
+.Header {
+    z-index: 50;
+    box-shadow: 0px 0px 10px 10px #343434;
+    position: fixed;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: -10px;
+    height: 150px;
+    width: 100%;
+    color: white;
+    background-color: #1d1d1d;
+}
+.text {
+  
+    text-decoration-style:solid;
+    text-shadow: 0px 0px 10px #343434;
+    margin-left: 60px;
+}
+.Left {
+    box-shadow:0px 0px 10px 10px #343434;
+    position: static;
+    text-align: left;
+    margin-left: -10px;
+    position: fixed;
+    height: 100%;
+    width: 25%;
+    color: white;
+    background-color: #AAAAAA;
+}
+.Top {
+    margin-top: -8px;
+    z-index: 60;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    text-align: right;
+    margin-left: -10px;
+    margin-right: -10px;
+    height: 10%;
+    width: 100%;
+    color: white;
+    box-shadow: 0px 0px 10px 10px #343434;
+    background-color: #555555;
+}
+.Bottom {
+    margin-left: -10px;
+    box-shadow: 0px 0px 10px 10px #343434;
+    position: fixed;
+    text-align: center;
+    bottom: 0px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 10%;
+    width: 100%;
+    color: white;
+    background-color: #555555;
+}
+
+
+@keyframes start
+{
+    from {opacity:0%}
+    to {opacity:100%}
+
+  
+}
