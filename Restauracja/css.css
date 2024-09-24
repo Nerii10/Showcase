@@ -38,7 +38,7 @@ li
 }
 .end
 {
-    height: 70;
+    height: 70px;
     background-color: #361f10;
 }
 
@@ -50,16 +50,24 @@ li
     background-color: #edccc2;
 }
 
-
+.left
+{
+    width: 60%;
+}
 .Image
 {
     height: 350px;
 
 }
-.Text
-{
-
-    padding-left: 30%;
+.Text {
+    height: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .online
