@@ -64,11 +64,68 @@ body
 {
     z-index: 3;
     transform: scaleX(-1);
-    height: 500px;
+    height: 100%;
 }
 .leftmain
 {
-      z-index: 1;
+  
+    z-index: 1;
     height:500;
     width:40%;
+}
+
+
+@media only screen and (max-width: 800px)
+{
+.img
+    {
+        height:90%;
+    }
+      .rightmain
+{
+  
+  font-size: 14px;
+}
+}
+
+@media only screen and (max-width: 700px)
+{
+.img
+    {
+     height:80%;
+    }
+}
+
+
+@media only screen and (max-width: 600px)
+{
+.img
+    {
+        height:70%;
+    }
+}
+
+
+@media only screen and (max-width: 500px)
+{
+.img
+    {
+        height:60%;
+    }
+    
+    .rightmain
+{
+  
+  font-size: 13px;
+}
+   
+}
+
+
+@media only screen and (max-width: 400px)
+{
+.img
+    {
+        height:50%;
+    }
 }
