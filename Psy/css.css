@@ -24,7 +24,7 @@ body
 .online
 {
     z-index: 0;
-    position: absolute;
+    
     color:white;
     padding: 20px;
     padding-left:  20px;
@@ -34,10 +34,12 @@ body
 
 .rightmain
 {
+    display: flex;
     height:500;
     width:60%;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .footTXT
