@@ -11,7 +11,7 @@ body
 }
 h1
 {
-    font-size: 40px;;
+    font-size: 40px;
     color: gold;
 }
 h2
@@ -33,7 +33,7 @@ li
 .start
 {
     padding-bottom: 20px;
-    height: 70;
+    height: 70px;
     background-color: #361f10;
 }
 .end
@@ -50,16 +50,19 @@ li
     background-color: #edccc2;
 }
 
-.left
-{
+.left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
     width: 60%;
 }
-.Image
-{
-    height: 350px;
+.Image {
+    position: initial;
+    height: 350;
 
 }
 .Text {
+    background-color: #edccc2;
     height: 350px;
     margin-left: auto;
     margin-right: auto;
