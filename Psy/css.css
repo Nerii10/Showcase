@@ -34,6 +34,8 @@ body
 
 .rightmain
 {
+    background-color: tan;
+    z-index: 2;
     display: flex;
     height:500;
     width:60%;
@@ -66,7 +68,7 @@ body
 }
 .leftmain
 {
-      z-index: 3;
+      z-index: 1;
     height:500;
     width:40%;
 }
