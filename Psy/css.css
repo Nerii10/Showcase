@@ -23,6 +23,7 @@ body
 }
 .online
 {
+    z-index: 0;
     position: absolute;
     color:white;
     padding: 20px;
@@ -35,6 +36,8 @@ body
 {
     height:500;
     width:60%;
+    justify-content: center;
+    align-items: center;
 }
 
 .footTXT
@@ -55,11 +58,13 @@ body
 }
 .img
 {
+    z-index: 3;
     transform: scaleX(-1);
     height: 500px;
 }
 .leftmain
 {
+      z-index: 3;
     height:500;
     width:40%;
 }
