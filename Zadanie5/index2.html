@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<style>
+
+    body
+    {
+        display: flex;
+    }
+    .main
+    {
+        width: 100%;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+
+
+    <div class="main">
+
+   
+    <h1 id="im"></h1>
+ 
+    <h2 id="nr"></h2>
+    
+    <h3 id="adr"></h2>
+   
+    
+
+    </div>
+
+    <script>
+
+    let imie = prompt("podaj imię - ")
+    let nr = prompt("podaj numer telefonu - ")
+    let adr = prompt("podaj adres email - ")
+
+    document.getElementById("im").innerHTML= "imie: " + imie
+    document.getElementById("im").style.fontWeight = "bold"
+
+  
+    document.getElementById("nr").innerHTML= "numer telefonu: " + nr
+    document.getElementById("nr").style.fontStyle = "italic"
+
+     
+    document.getElementById("adr").innerHTML= "Adres Email: " + adr
+    document.getElementById("adr").style.fontFamily = "Georgia"
+
+    
+    </Script>
+
+
+
+</body>
+</html>
