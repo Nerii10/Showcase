@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+    let nt = prompt("podaj numer dnia swoich urodzin - ")
+    let nk = prompt("podaj numer dnia urodzin twojej kolezanki/kolegi - ")
+    let x = false;
+    let y = false;
+    let z = false;
+    document.write("Numer dnia twoich urodzin - " + nt + "<br>"
+    )
+    document.write("Numer dnia urodzin twojej kolezanki/kolegi - " + nk + "<br>")
+    
+    if(nt < nk)
+    {
+        x = true
+    }
+    else
+    {
+        x = false
+    }
+
+    if(nt == nk)
+    {
+       y = true
+    }
+    else
+    {
+        y = false
+    }
+
+    if(nt > nk)
+    {
+        z = true
+    }
+    else
+    {
+        z = false
+    }
+    document.write("Numer dnia mniejszy: " + x + "<br>")
+    document.write("Dzień równy: " + y + "<br>")
+    document.write("Numer dnia większy: " + z + "<br>")
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
