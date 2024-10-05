@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div class="main">
+
+
+        <div class="js">
+            <Script>
+                let imie = prompt("Podaj imię")
+                let wiek = prompt("Podaj wiek")
+                let wzrost = prompt("Podaj wzrost")
+
+                let wzrost2 = parseFloat(wzrost).toFixed(2)
+
+                document.write("imię - " + imie + "<br>")
+                document.write("Wiek - " + wiek + "<br>")
+                document.write("Wzrost - " + wzrost2 + "m" + "<br>")
+            </Script>
+        </div>
+
+
+
+
+        <div class="js" style="display:flex; flex-direction:column; flex-wrap: nowrap;">
+
+
+            <h1 id="im"></h1>
+            <h2 id="nr"></h2>
+            <h3 id="adr"></h3>
+
+
+
+        </div>
+
+        <script>
+
+            let nr = prompt("podaj numer telefonu - ")
+            let adr = prompt("podaj adres email - ")
+
+            document.getElementById("im").innerHTML = "imie: " + imie
+            document.getElementById("im").style.fontWeight = "bold"
+            document.getElementById("im").style.fontSize = "20px"
+
+
+            document.getElementById("nr").innerHTML = "numer telefonu: " + nr
+            document.getElementById("nr").style.fontStyle = "italic"
+            document.getElementById("nr").style.fontSize = "20px"
+
+
+            document.getElementById("adr").innerHTML = "Adres Email: " + adr
+            document.getElementById("adr").style.fontFamily = "Georgia"
+            document.getElementById("adr").style.fontSize = "20px"
+
+
+        </script>
+
+        <div class="js">
+            <Script>
+                let pi = 3.14159
+                let sqrt = 1.4142
+
+                document.write("liczba pi: " + pi + "<br>")
+                document.write("pierwiastek z 2: " + sqrt)
+            </Script>
+        </div>
+
+
+    </div>
+
+</body>
+</html>
