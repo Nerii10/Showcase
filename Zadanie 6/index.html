@@ -1,35 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css.css" />
 </head>
 <body>
-    
+
+    <div class="main">
+        <div class="js">
+            <script>
+                let nt = prompt("podaj numer dnia swoich urodzin - ")
+                let nk = prompt("podaj numer dnia urodzin twojej kolezanki/kolegi - ")
+                let x = false;
+                let y = false;
+                let z = false;
+                document.write("Numer dnia twoich urodzin - " + nt + "<br>"
+                )
+                document.write("Numer dnia urodzin twojej kolezanki/kolegi - " + nk + "<br>")
+
+                if (nt < nk) {
+                    x = true
+                }
+                else {
+                    x = false
+                }
+
+                if (nt == nk) {
+                    y = true
+                }
+                else {
+                    y = false
+                }
+
+                if (nt > nk) {
+                    z = true
+                }
+                else {
+                    z = false
+                }
+                document.write("Numer dnia mniejszy: " + x + "<br>")
+                document.write("Dzień równy: " + y + "<br>")
+                document.write("Numer dnia większy: " + z + "<br>")
+            </script>
+        </div>
+
+        <div class="js">
+            <script>
+                for (let i = 1; i <= 3; i++) {
+
+                    document.write(2 ** i + "<Br>")
+
+                }
+            </script>
+        </div>
+        <div class="js">
+            <script>
+                let f = nt
+
+                for (let i = 1; i <= 3; i++) {
+                    if (f >= 32) {
+                        f = 1
+                    }
+                    document.write(f + "<Br>")
+                    f++
+                }
+            </script>
+        </div>
 
 
-    <script>
-
-
-    for(let i = 1; i<=3 ; i++)
-    {
-
-        document.write(2**i + "<Br>")
-
-    }
-        
-
-
-
-    </script>
-
-
-
-
-
-
-
+    </div>
 
 
 
