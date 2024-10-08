@@ -10,33 +10,52 @@
                     <div id="Image">
                     
                         <script>
+                            let anm = false;
+                            let anm2 = false;
                     var src = document.getElementById("Image");
                     var img = document.createElement("img");
                     img.src = "Terraria.png";
                     src.appendChild(img);
-                    document.getElementById("Image").style.visibility = "hidden";   
+                            document.getElementById("Image").style.visibility = "hidden";
+                            
                     let y = 2
                     function insert()
                     {
+                        document.getElementById("Image").style.visibility = "visible";
+                        if (anm2 == true) return 0;
+                        anm2 = true;
                             if(y==1)
-                        {
-                            document.getElementById("Image").style.visibility = "hidden";   
+                            {
+
+                            document.getElementById("Image").style.animation = "hide 1s both";   
                             y = 2;
                         }
                         else if(y==2)
                         {
-                            document.getElementById("Image").style.visibility = "visible";   
+
+                                document.getElementById("Image").style.animation = "unhide 1s both";
                             y = 1;
                         }
+                        button.addEventListener('animationend', () => { anm2 = false; })
+                            }
 
-                    }
+                            function anim()
+                            {
+                                if (anm == true) return 0;
+                                anm = true;
+                                let button = document.getElementById("button");
+                                button.style.animation = "none";
+                                button.offsetWidth;
+                                button.style.animation = "anim 0.7s both ease ";
+                                button.addEventListener('animationend', () => { anm = false;; })
+                            }
                         </script>
           
                     </div>
                 </div>
             <form>
                 <br><br>
-                <input type="button" style="width: 200px;" id="button"  value="Click Me!" onclick="insert()"> 
+                <input type="button" class="button" id="button"  value="Click Me!" onclick=" anim(), insert()"> 
             </form>
             </div>
         </div>
