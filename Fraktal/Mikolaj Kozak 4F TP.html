@@ -150,19 +150,19 @@
         }
     </style>
 
-    <h1 class="text">Zadanie Wykonał - Mikołaj Kozak 4F</h1>
+    <h1 class="text">MIKOŁAJ KOZAK 4F</h1>
  
     <div class="main"> 
 
-        <canvas id="MePłótno" class="canva" width="600" height="600"></canvas>
+        <canvas id="płótno" class="canva" width="600" height="600"></canvas>
 
 
         <script>
 
 
-            let płótno = document.getElementById('MePłótno');
+            let canvas = document.getElementById('płótno');
 
-            let img = płótno.getContext('2d');
+            let img = canvas.getContext('2d');
 
             let isAnimating = false;
 
@@ -207,10 +207,11 @@
                 isAnimating = true;
 
                 let button = document.getElementById("button");
-                let canvas = document.getElementById("MePłótno");
+                let canvas = document.getElementById("płótno");
 
                 button.style.animation = "none";
                 button.offsetWidth;
+                
                 button.style.animation = "anim 1s both ease ";
 
                 if (canvasD == false) {
