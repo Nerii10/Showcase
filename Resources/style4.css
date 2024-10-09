@@ -149,6 +149,7 @@ a
     transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
     border-radius: 44px 44px;
     height: 21px;
+    cursor:pointer;
 }
 
 .Buttons:hover {
