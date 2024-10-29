@@ -1,5 +1,6 @@
 html,body
 {
+    font-family:consolas;
     height: 100%;
     width: 100%;
     display: flex;
@@ -47,13 +48,13 @@ html,body
     content: "Podaj Wartość Parametru B ";
     color:black;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 18px;
 }
 .i2::before
 {
     content: "Podaj Wartość Parametru A ";
     color:black;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: bold;
 }
 
@@ -61,7 +62,7 @@ html,body
 {
     content: "Podaj Wartość Parametru C ";
     color:black;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: bold;
 }
 
