@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    
+
+
+
+<div class="Main">
+    <div class="calculations">
+            <div class="i1">
+                <input type="number" id="b" class="inputNumber1">
+            </div>
+            <Br>
+            <div class="i2">
+                <input type="number" id="a"class="inputNumber2">
+            </div>
+            <Br>
+           <div class="i3">
+                <input type="number" id="c"class="inputNumber3">
+           </div>
+           <Br>
+            <input type="button" id="button" value="Oblicz Funkcje Kwadratową" onclick="oblicz()">
+    </div>
+    <br><br>
+
+    <div class="results">
+        <p>Delta</p>
+        <h1 id="delta">0</h1>
+        <br> <br>
+        <p>x1</p>
+        <h1 id="x1">0</h1>
+        <br> <br>
+        <p>x2</p>
+        <h1 id="x2">0</h1>
+    </div>
+</div>
+
+
+<script>
+    let a = 0
+    let b = 0
+    let c = 0
+
+    let delta = 0
+    let x1,x2 = 0 
+
+function oblicz()
+    {
+        a = (document.getElementById("a").value)
+        b = (document.getElementById("b").value)
+        c = (document.getElementById("c").value)
+      
+
+        delta = (Math.pow(b,2) - 4*a*c)
+
+        x1 = (-b - Math.sqrt(delta)) / (2 * a)
+
+        x2 = (-b + Math.sqrt(delta)) / (2 * a)
+    
+    
+        document.getElementById('delta').innerText = delta;
+
+
+        if(delta<0) 
+    {
+        document.getElementById('x1').innerText = "Nie Istnieje";
+
+        document.getElementById('x2').innerText = "Nie Istnieje";
+    }
+        else
+    {
+        document.getElementById('x1').innerText = x1.toFixed(2);
+
+        document.getElementById('x2').innerText = x2.toFixed(2);
+    }
+        if(delta == 0)
+    {
+        document.getElementById('x1').innerText = x1.toFixed(2);
+        document.getElementById('x2').innerText = x2.toFixed(2);
+    }
+        
+    }
+</script>
+
+
+
+
+
+</body>
+</html>
