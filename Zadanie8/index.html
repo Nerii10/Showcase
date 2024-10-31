@@ -79,30 +79,27 @@ switch(x)
     case 1:
         if(animations[0] == 0)
         {
-            animations[0] = 1
             form1.style.animation = "none"
             form1.offsetWidth;
-            form1.style.animation = "form 0.5s ease"
+            form1.style.animation = "form 0.25s  ease"
             addEventListener("animationend", () => {animations[0] = 0})
             break;
         }
     case 2:
         if(animations[1] == 0)
         {
-            animations[1] = 1
             form2.style.animation = "none"
             form2.offsetWidth;
-            form2.style.animation = "form 0.5s ease"
+            form2.style.animation = "form 0.25s ease"
             addEventListener("animationend", () => {animations[1] = 0})
             break;
         }    
     case 3:
         if(animations[2] == 0)
         {
-            animations[2] = 1
             form3.style.animation = "none"
             form3.offsetWidth;
-            form3.style.animation = "form 0.5s ease"
+            form3.style.animation = "form 0.25s ease"
             addEventListener("animationend", () => {animations[2] = 0})
             break;
         }

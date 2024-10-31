@@ -136,8 +136,7 @@ a::before
     }
 
     50% {
-        color:red;
-  
+        font-size: 15px;
     }
 
     100% {
