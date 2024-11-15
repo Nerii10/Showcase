@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="img(1), LoadContent(3)">
+
+    <style>
+        body 
+        {
+            display: flex;
+            flex-direction: column;
+        }
+        .left
+        {
+            color:white;
+                height: 500px;
+                width: 20%;
+                background-color:   gray;
+                list-style-type: square;
+        }
+        .right
+        {
+                height: 500px;
+                width: 80%;
+        }
+        .banner
+        {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 300%;
+                text-align: center;
+                background-color: gray;
+                color:white;
+        }
+
+        a
+        {
+                color:white;
+        }
+
+        .main
+        {
+            display: flex;
+            flex-direction: row;
+        }
+        .footer
+        {
+            text-align: center;
+            color:white;
+            background-color:   gray;
+        }
+        .c
+        {
+            display: inline;
+        }
+        .underline
+        {
+            text-decoration: underline;
+        }
+        </style>
+    
+    <div class="banner">
+        <a onclick="LoadContent(3)" class="underline">FIGURY GEOMETRYCZNE I MATEMATYCY</a>
+    </div>
+
+    <div class="main">
+        <div class="left">
+            <h1>WYBIERZ FIGURĘ</h1>
+
+            <ol>
+                <li> <h2 onclick="LoadContent(1)" class="underline">KWADRAT</h2></li>
+               
+                <ul>
+                    <li>obwód</li>
+                    <li>pole</li>
+                </ul>
+
+                <li> <h2 onclick="LoadContent(2)"  class="underline">KOŁO</h2></li>
+                <ul>
+                    <li>obwód</li>
+                    <li>pole</li>
+            </ul>
+
+            </ol>
+        </div>
+
+        <div class="right">
+          <div class="figury" id="figur">
+            <h1>FIGURY GEOMETRYCZNE</h1>
+            <br>
+            <br>
+            <br>
+            <h2 class="c" id="c" onmouseover="img(1)">KOŁO</h2>
+            <h2 class="c" id="k" onmouseover="img(2)">KWADRAT </h2>
+            <br><br>
+            <img src="" id="i" style="padding-left: 5%;">
+          </div>
+          <div class="kwadrat" id="kwadrat">
+            <h1>KWADRAT</h1>
+            <label for="number">podaj dlugosc boku</label>
+            <input type="number" id="BokKwadrat">
+            <br><br>
+            <input type="button" value="Licz Obwód" onclick="Obwod(1)">
+            <input type="button" value="Licz Pole" onclick="Pole(1)">
+            <h2 id="kw"></h2>
+
+          </div>
+          <div class="kolo" id="kolo">
+            <h1>KOŁO</h1>
+            <label for="number">podaj dlugosc promienia</label>
+            <input type="number" id="Promien">
+            <br><br>
+            <input type="button" value="Licz Pole" onclick="Pole(2)">
+            <h2 id="kkw"></h2>
+
+          </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h2>pesel - mikołaj kozak</h2>
+
+
+    <script>
+        let c = document.getElementById("c")
+        let k = document.getElementById("k")
+        let image = document.getElementById("i")
+        
+        let kw = document.getElementById("kw")
+        let kkw = document.getElementById("kkw")
+
+        let fig = document.getElementById("figur")
+        let kwadrat = document.getElementById("kwadrat")
+        let kolo = document.getElementById("kolo")
+
+        function LoadContent(x)
+        {
+            switch (x)
+            {
+                case 1: 
+                    fig.style.display = "none"
+                    kwadrat.style.display = "block"
+                    kolo.style.display = "none"
+                    break;
+                case 2: 
+                    fig.style.display = "none"
+                    kwadrat.style.display = "none"
+                    kolo.style.display = "block"
+                    break;
+                case 3: 
+                    fig.style.display = "block"
+                    kwadrat.style.display = "none"
+                    kolo.style.display = "none"
+                    break;
+            }
+
+
+
+        }
+
+        function Obwod(x)
+        {
+            let a = document.getElementById("BokKwadrat").value
+            if(x == 1)
+        {
+            kw.innerText = a*4
+        } else
+        {
+            
+        }
+
+        }
+
+        function Pole(x)
+        {
+           
+            if(x == 1)
+        {
+            let a = document.getElementById("BokKwadrat").value
+            kw.innerText = a*a
+        }
+        else
+        {
+            let r = document.getElementById("Promien").value
+            kkw.innerText = r*r + "pi"
+
+        }
+        
+        }
+
+
+        function img(x)
+        {
+            if(x==1)
+        {
+            image.src = "kolo.png"
+
+        } else
+        {
+            image.src = "kwadrat.png"
+
+        }
+        }
+
+       
+    </script>
+</div>
+</body>
+</html>
