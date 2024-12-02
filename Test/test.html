@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="css.css">
+
+
+</head>
+<body>
+
+
+    <script>
+    IsAnimatingSearch = false;
+    IsSearchOpen = false;
+
+
+        function Search()
+        {
+        if (IsAnimatingSearch) return;
+            if(IsSearchOpen)
+            {
+                IsAnimatingSearch = true;
+                let SearchBar = document.getElementById("SearchBar")
+                let Header = document.getElementById("Header")
+                SearchBar.style.animation = "none"
+                SearchBar.offsetWidth;
+                SearchBar.style.animation = "CloseSearch 0.5s ease forwards"
+
+                Header.style.animation = "none"
+                Header.offsetWidth;
+                Header.style.animation = "HeaderFadeInShadow 0.1s  ease forwards"
+
+                SearchBar.addEventListener('animationend', () => { IsAnimatingSearch = false; IsSearchOpen = false;}, {once:true});
+            }
+            else
+            {
+                IsAnimatingSearch = true;
+                let SearchBar = document.getElementById("SearchBar")
+                SearchBar.style.animation = "none"
+                SearchBar.offsetWidth;
+                SearchBar.style.animation = "OpenUpSearch 0.5s ease forwards"
+
+                
+                Header.style.animation = "none"
+                Header.offsetWidth;
+                Header.style.animation = "HeaderFadeOutShadow 0.1s  ease forwards"
+                
+
+                SearchBar.addEventListener('animationend', () => { IsAnimatingSearch = false; IsSearchOpen = true; }, {once:true});
+            }
+        } 
+
+
+    </script>
+
+<div class="Header" id="Header">
+    <div class="HeaderLeft">
+        <h3 style="margin-top: 35px; margin-left: 20px;">nerii.com</h3>
+    </div>
+
+    <div class="HeaderRight">
+        <img src="../Resources/home.png" style="width: 80px; height: 80px; margin-top:10px; cursor:pointer" onclick="Search()">
+        <h3 style="margin-top:50px">Home</h3>
+    </div>
+</div>
+
+<div class="search" id="SearchBar">
+    <img src="../Resources/home.png" class="logo">
+    <img src="Unreal.png" class="logo">
+    <img src="Unity.png" class="logo">
+    <img src="Blender.png" class="logo">
+</div>
+
+
+<div class="space"></div>
+
+
+<container class="center">
+<div class="main">
+
+    <h1>Climbing System</h1>
+    <hr>
+
+    <iframe src="https://blueprintue.com/render/fqni6i4_/" scrolling="no" width="500px" height="500px"></iframe>
+
+</div>
+</container>
+
+
+</body>
+</html>

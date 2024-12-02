@@ -1,0 +1,131 @@
+html, body {
+    height: 100%; 
+    margin: 0; 
+    padding: 0; 
+    background-color: #0d0d0d;
+    font-family: Consolas;
+    color: white;
+    overflow: hidden; 
+}
+body {
+    display: flex;
+    flex-direction: column; 
+    min-width: 100%;
+    min-height: 100%;
+}
+
+/*Div Elements*/
+.Header {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    background-color: #0a0a0a;
+    width: 100%;
+    height: 75px;
+    margin-top: -14px;
+    position: fixed;
+    box-shadow: 0px 0px 30px #151515;
+    display: flex;
+    z-index: 100;
+}
+.HeaderRight
+{
+    width:10%;
+    display:flex;
+    flex-direction:row;
+}
+.HeaderLeft
+{
+    width: 80%;
+}
+.center
+{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.search {
+    justify-content: center;
+    gap: 100px;
+    margin-top: 50px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 0px;
+    width: 100%;
+    background-color: #0a0a0a;
+    box-shadow: 0px 0px 30px #151515;
+    position: absolute;
+    left: 0; 
+    top: 0;
+}
+.space
+{
+    height: 100px;
+}
+.main {
+    width: 90%;
+    height: 100%;
+}
+
+/*Text Elements*/
+
+h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color:white;
+}
+h3 
+{
+    font-size: 20px;
+    color:white;
+}
+
+/*Other Elements*/
+
+hr {
+    border-color: white;
+    border-radius: 200px;
+    width: 100%;
+}
+
+/*Image Elements*/
+
+.logo
+{
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+}
+
+
+
+
+@keyframes OpenUpSearch 
+{
+    0%{height: 0px;}
+    100%{height: 200px;}
+}
+@keyframes CloseSearch 
+{
+   
+    0%{height: 200px;}
+    100%{height: 0px;}
+}
+@keyframes HeaderFadeOutShadow
+{
+    0%{box-shadow: 0px 0px 30px #151515;}
+    100%{box-shadow: 0px 0px 0px #151515;}
+}
+@keyframes HeaderFadeInShadow
+{
+    0%{box-shadow: 0px 0px 0px #151515;}
+    100%{box-shadow: 0px 0px 30px #151515;}
+}
