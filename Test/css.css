@@ -5,7 +5,6 @@ html, body {
     background-color: #0d0d0d;
     font-family: Consolas;
     color: white;
-    overflow: hidden; 
 }
 body {
     display: flex;
