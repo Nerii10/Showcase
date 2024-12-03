@@ -139,10 +139,7 @@ hr {
 
 .Variable
 {
-    display: flex;
-    flex-direction: row;
     gap: 10%;
-    align-items: center;
 }
 
 td
@@ -171,7 +168,7 @@ tr:nth-child(even)
     height: 10px;
     border-radius: 20px;
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.473);
-    background-color: rgb(49, 0, 0);
+    background-color: rgb(78, 1, 1);
 }
 
 .Float
@@ -179,9 +176,19 @@ tr:nth-child(even)
     width: 20px;
     height: 10px;
     border-radius: 20px;
-    box-shadow: 0px 1px 2px 0px rgba(18, 99, 11, 0.295); 
-    background-color: rgb(39, 179, 26);
+    box-shadow: 0px 1px 2px 0px rgba(5, 36, 2, 0.897); 
+    background-color: rgb(53, 163, 43);
 }
+
+.Vector
+{
+    width: 20px;
+    height: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 1px 2px 0px rgba(22, 22, 0, 0.897); 
+    background-color: rgb(250, 227, 22);
+}
+
 
 /*Keyframes*/
 
