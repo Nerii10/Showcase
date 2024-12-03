@@ -80,6 +80,7 @@ h1 {
     font-size: 2.5rem; /* Zmniejszone wymiary */
     text-transform: uppercase;
     text-align: center;
+    color: black;
 }
 
 h2 {
