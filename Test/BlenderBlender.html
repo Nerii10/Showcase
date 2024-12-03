@@ -63,10 +63,22 @@
     </div>
 
     <div class="search" id="SearchBar">
-        <img src="../Resources/home.png" class="logo">
-        <img src="../Resources/Unreal.png" class="logo">
-        <img src="../Resources/Unity.png" class="logo">
-        <img src="../Resources/Blender.png" class="logo">
+
+        <a href="index.html" class="AProject">
+        <img src="Resources/home.png" class="logo">
+        </a>
+
+        <a href="UnrealUnreal.html" class="AProject">
+        <img src="Resources/Unreal.png" class="logo">
+        </a>
+
+        <a href="UnityUnity.html" class="AProject">
+        <img src="Resources/Unity.png" class="logo">
+        </a>
+
+        <a href="BlenderBlender.html" class="AProject">
+        <img src="Resources/Blender.png" class="logo">
+        </a>
     </div>
 </div>
 
@@ -77,99 +89,108 @@
 <container class="center">
 <div class="main">
 
-    <h1>Unreal Engine</h1>
+    <h1>BLENDER</h1>
     <hr>
-
-    <br>
-
     <div class="Paragraph">
         <ul>
             <li>
                 <div class="TextBox">
                     <h2>Summary</h2>
-                    <p>Current page displays all off my personal projects or mechanics I made using Unreal Engine 4.26.2</p>
+                    <p>This page displays things I made using Blender.</p>
                 </div>
             </li>
 
             <li>
                 <div class="TextBox">
-                    <h2>Project List</h2>
+                    <h2>File Formats</h2>
+                    <p>FBX,OBJ,BLEND</p>
                 </div>
             </li>
         </ul>
     </div>
     
-    <div class="Project">
-        <div class="ProjectLeft">
-            <h2>Climbing</h2>
-        </div>
+ 
 
-        <div class="ProjectRight">
-            <p>sample climbing project</p>
-        </div>
-    </div>
+    <hr>
 
     <br><br>
-
-    <div class="Project">
-        <div class="ProjectLeft">
-            <h2>Sword</h2>
-        </div>
-
-        <div class="ProjectRight">
-            <p>sword game</p>
-        </div>
+    
+    <div class="Paragraph">
+        <ul>
+            <li>
+                <div class="TextBox">
+                    <h2>Projects</h2>
+                    <p>Some of my projects</p>
+                </div>
+            </li>
+        </ul>
     </div>
 
-    <br><br><br><br>
+    <style>
+        .BlenderImage
+        {
+            width: 300px;
+            transition: 0.5s ease;
+        }
+        .BlenderSlide
+        {
+            display: flex;
+            flex-direction: row;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px black;
+            overflow: hidden;
+        }
+        
 
-    <iframe src="https://blueprintue.com/render/fqni6i4_/" scrolling="no" class="blueprint" allowfullscreen="yes"></iframe>
+    </style>
 
-    <br><br><br><br>
+    <button onclick="Left()"> left</button>
+    <div  class="BlenderSlide">
+        <img src="Resources/Render1.png" class="BlenderImage">
+        <img src="Resources/Render4.png" class="BlenderImage">
+        <img src="Resources/Render3.png" class="BlenderImage">
+    </div>
+    <button onclick="Right()"> Right</button>
 
-    <table class="Variables">
-        <tr>
-            <td style="width: 40%; text-align: left;">VariableName</td>
-            <td style="width: 60%; text-align: right;">Description</td>
-        </tr>   
-
-        <tr>
-            <td style="width: 40%; text-align: left;">
-                <div class="Variable">
-                    <div class="Float"></div>
-                    Health
-                </div>   
-            </td>
-
-            <td style="width: 60%; text-align: right;">PlayerHealth</td>
-        </tr>
-      
-
-        <tr>
-            <td style="width: 40%; text-align: left;">
-                <div class="Variable">
-                    <div class="Bool"></div>
-                    IsVisible?
-                </div>   
-            </td>
-
-            <td style="width: 60%; text-align: right;">Check If Player Is Visible</td>
-        </tr>
-
-        <tr>
-            <td style="width: 40%; text-align: left;">
-                <div class="Variable">
-                    <div class="Vector"></div>
-                    Position
-                </div>   
-            </td>
-
-            <td style="width: 60%; text-align: right;">PlayerPosition</td>
-        </tr>
+    <script>
+            let Images = document.getElementsByClassName("BlenderImage");
+            let CurrImage = 0;
+            let currTranslate = 300;
+            BlenderImagesMax = 3;
+        function Left()
+        {
+            if(CurrImage > 1)
+        {
+            currTranslate += 300
+            CurrImage -= 1 
+            for(i = 0; i<BlenderImagesMax; i++)
+            {
+                Images[i].style.transform = `translateX(${currTranslate}px)`; 
+                
+            }
+            
+        }
+            
+        }
 
 
-    </table>
-    
+        function Right()
+        {
+            if(CurrImage < BlenderImagesMax)
+            {
+                currTranslate -= 300
+                CurrImage += 1 
+                for(i = 0; i<BlenderImagesMax; i++)
+                {
+                    Images[i].style.transform = `translateX(${currTranslate}px)`; 
+                    
+                }
+                
+            }
+            
+        }
+    </script>
 </div>
 </container>
 
