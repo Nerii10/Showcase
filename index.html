@@ -21,9 +21,15 @@
                 IsAnimatingSearch = true;
                 let SearchBar = document.getElementById("SearchBar")
                 let Header = document.getElementById("Header")
+                let home = document.getElementById("home")
+
                 SearchBar.style.animation = "none"
                 SearchBar.offsetWidth;
                 SearchBar.style.animation = "CloseSearch 0.5s ease forwards"
+
+                home.style.animation = "none"
+                home.offsetWidth;
+                home.style.animation = "ClickHome 0.5s ease forwards"
 
                 Header.style.animation = "none"
                 Header.offsetWidth;
@@ -35,11 +41,16 @@
             {
                 IsAnimatingSearch = true;
                 let SearchBar = document.getElementById("SearchBar")
+                let home = document.getElementById("home")
+                let Header = document.getElementById("Header")
                 SearchBar.style.animation = "none"
                 SearchBar.offsetWidth;
                 SearchBar.style.animation = "OpenUpSearch 0.5s ease forwards"
 
-                
+                home.style.animation = "none"
+                home.offsetWidth;
+                home.style.animation = "ClickHome 0.5s ease forwards"
+
                 Header.style.animation = "none"
                 Header.offsetWidth;
                 Header.style.animation = "HeaderFadeOutShadow 0.5s  ease forwards"
@@ -48,8 +59,6 @@
                 SearchBar.addEventListener('animationend', () => { IsAnimatingSearch = false; IsSearchOpen = true; }, {once:true});
             }
         } 
-
-
 </script>
 
 <div class="Header" id="Header">
@@ -58,7 +67,7 @@
     </div>
 
     <div class="HeaderRight">
-        <img src="Resources/home.png" style="width: 80px; height: 80px; margin-top:10px; cursor:pointer" onclick="Search()">
+        <img src="Resources/home.png" style="width: 80px; height: 80px; margin-top:10px; cursor:pointer" onclick="Search()" id="home">
         <h3 style="margin-top:50px">Home</h3>
     </div>
 
@@ -83,14 +92,86 @@
 </div>
 
 
+<br><br><br>
 
-<br><br><br><br>
+
+<center>
+    <div  class="Slider">
+        <div class="Images">
+
+            <img src="Resources/sword2.png" class="Image">
+            <img src="Resources/sword4.png" class="Image">
+        </div>
+    </div>
+</center>   
+
+<script>
+    let Images = document.getElementsByClassName("Image");
+    let currTranslate = 0;
+    let b = 1
+    
+    setInterval(move, 10000); // Wywołuj funkcję co 1 sekundę
+
+    function move() {
+        if(b == 1)
+        {
+            b=2
+            currTranslate -= 100; // Przesuwamy w lewo o 100px (lub zmień na inną wartość)
+            for (let i = 0; i < Images.length; i++) 
+            { // Iteruj po wszystkich obrazach
+                Images[i].style.transform = `translateX(${currTranslate}%)`; 
+            }
+        }
+        else
+        {
+            b=1
+            currTranslate += 100; // Przesuwamy w lewo o 100px (lub zmień na inną wartość)
+            for (let i = 0; i < Images.length; i++) 
+            { // Iteruj po wszystkich obrazach
+                Images[i].style.transform = `translateX(${currTranslate}%)`; 
+            }
+        }
+        
+    }
+</script>
+
+<style>
+    .Slider
+    {
+        width:100%;
+    }
+
+    .Images
+    {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+
+    }
+
+    .Image
+    {
+        box-shadow: 0px 0px 10px 0px black;
+        width: 100%;
+        filter:saturate(0.2);
+        transition: 0.2s ease;
+    }
+    .center
+    {
+        box-shadow: 0px 0px 30px 0px black;
+        z-index:1;
+    }
+</style>
 
 <container class="center">
 <div class="main">
 
     <h1>Mikolaj Kozak </h1>
     <hr>
+
+    <br>
+
     <div class="Paragraph">
         <ul>
             <li>
@@ -179,13 +260,14 @@
     </div>
 
    
-    
+    <br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br>
+
 </div>
 </container>
 
-    <br><br><br><br>
-    <br><br><br><br>
-    <br><br><br><br>
+ 
 
 </body>
 </html>
