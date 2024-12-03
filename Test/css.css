@@ -1,19 +1,22 @@
+/* Ogólne poprawki */
 html, body {
-    height: 100%; 
-    margin: 0; 
-    padding: 0; 
-    background-color: #0d0d0d;
-    font-family: Consolas;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Consolas, sans-serif;
     color: white;
-}
-body {
-    display: flex;
-    flex-direction: column; 
-    min-width: 100%;
-    min-height: 100%;
+    background-color: #0d0d0d;
+    scroll-behavior: smooth; /* Ułatwia nawigację */
 }
 
-/*Div Elements*/
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    width: 100%;
+}
+
+/* Stylizacja nagłówka */
 .Header {
     color: white;
     display: flex;
@@ -21,152 +24,160 @@ body {
     background-color: #0a0a0a;
     width: 100%;
     height: 75px;
-    margin-top: -14px;
-    position: sticky;
-    box-shadow: 0px 0px 30px #151515;
-    display: flex;
-    z-index: 100;
-}
-.HeaderRight
-{
-    width:10%;
-    display:flex;
-    flex-direction:row;
-}
-.HeaderLeft
-{
-    width: 80%;
-}
-.center
-{
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-.search {
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 50px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    height: 0px;
-    width: 100%;
-    background-color: #0a0a0a;
-    box-shadow: 0px 0px 30px #151515;
-    position: absolute;
-    left: 0; 
+    position: sticky; /* Zamiast fixed dla lepszej responsywności */
     top: 0;
+    z-index: 100;
+    box-shadow: 0px 0px 30px #151515;
+    padding: 0 10px;
+    align-items: center;
 }
-.space
-{
-    height: 100px;
+
+.HeaderLeft, .HeaderRight {
+    display: flex;
+    align-items: center;
 }
+
+.HeaderLeft {
+    width: 80%;
+    justify-content: flex-start;
+}
+
+.HeaderRight {
+    width: 20%;
+    justify-content: flex-end;
+}
+
+/* Logo */
+.logo {
+    width: 60px; /* Domyślnie mniejszy rozmiar */
+    height: 60px;
+}
+
+/* Treść */
 .main {
     width: 90%;
-    height: 100%;
-}
-
-/*Text Elements*/
-
-h1 {
-    font-size: 40px;
-    text-transform: uppercase;
-}
-
-h2 {
-    font-size: 25px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color:white;
-}
-h3 
-{
-    font-size: 20px;
-    color:white;
-}
-
-/*Other Elements*/
-
-hr {
-    border-color: white;
-    border-radius: 200px;
-    width: 100%;
-}
-
-/*Image Elements*/
-
-.logo
-{
-    width: 100px;
-    height: 100px;
+    margin: 0 auto;
+    padding: 20px;
     box-sizing: border-box;
 }
 
-
-
-
-@keyframes OpenUpSearch 
-{
-    0%{height: 0px;}
-    100%{height: 200px;}
-}
-@keyframes CloseSearch 
-{
-   
-    0%{height: 200px;}
-    100%{height: 0px;}
-}
-@keyframes HeaderFadeOutShadow
-{
-    0%{box-shadow: 0px 0px 30px #151515;}
-    100%{box-shadow: 0px 0px 0px #151515;}
-}
-@keyframes HeaderFadeInShadow
-{
-    0%{box-shadow: 0px 0px 0px #151515;}
-    100%{box-shadow: 0px 0px 30px #151515;}
+/* Szukajka */
+.search {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin: 20px 0;
+    width: 100%;
+    justify-content: center;
+    background-color: #0a0a0a;
+    padding: 20px;
+    box-shadow: 0px 0px 30px #151515;
+    border-radius: 10px;
 }
 
+/* Teksty */
+h1 {
+    font-size: 2.5rem; /* Zmniejszone wymiary */
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
     .Header {
         flex-direction: column;
         height: auto;
+        padding: 10px;
     }
 
-    .HeaderRight, .HeaderLeft {
+    .HeaderLeft, .HeaderRight {
         width: 100%;
         justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .logo {
+        width: 50px;
+        height: 50px;
     }
 
     .search {
         flex-direction: column;
-        gap: 20px;
-        height: auto;
-        padding: 20px 0;
-    }
-
-    .main {
-        width: 100%;
-        padding: 0 10px;
-    }
-
-    .logo {
-        width: 80px;
-        height: 80px;
+        gap: 10px;
+        padding: 15px;
     }
 
     h1 {
-        font-size: 30px;
+        font-size: 2rem;
     }
 
     h2 {
-        font-size: 20px;
-        letter-spacing: 1px;
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    .main {
+        width: 95%;
+        padding: 10px;
     }
 
     .space {
         height: 50px;
+    }
+}
+
+/* Dodatkowe poprawki dla małych ekranów */
+@media (max-width: 480px) {
+    .Header {
+        padding: 5px;
+    }
+
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .HeaderLeft, .HeaderRight {
+        margin-bottom: 5px;
+    }
+
+    .search {
+        gap: 5px;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    h3 {
+        font-size: 0.9rem;
+    }
+
+    .main {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .space {
+        height: 30px;
     }
 }
