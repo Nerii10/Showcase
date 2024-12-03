@@ -126,24 +126,7 @@
         </ul>
     </div>
 
-    <style>
-        .BlenderImage
-        {
-            width: 300px;
-            transition: 0.5s ease;
-        }
-        .BlenderSlide
-        {
-            display: flex;
-            flex-direction: row;
-            width: 300px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px 0px black;
-            overflow: hidden;
-        }
-        
-
-    </style>
+    
 
     <button onclick="Left()"> left</button>
     <div  class="BlenderSlide">
@@ -154,16 +137,31 @@
     <button onclick="Right()"> Right</button>
 
     <script>
-            let Images = document.getElementsByClassName("BlenderImage");
-            let CurrImage = 0;
-            let currTranslate = 300;
-            BlenderImagesMax = 3;
-        function Left()
+        let Images = document.getElementsByClassName("BlenderImage");
+        let CurrImage = 1;
+        let currTranslate = 0;
+        BlenderImagesMax = 3;
+    function Left()
+    {
+        if(CurrImage > 1)
+    {
+        currTranslate += 300
+        CurrImage -= 1 
+        for(i = 0; i<BlenderImagesMax; i++)
         {
-            if(CurrImage > 1)
+            Images[i].style.transform = `translateX(${currTranslate}px)`; 
+            
+        }
+        
+    }
+        
+    }
+    function Right()
+    {
+        if(CurrImage < BlenderImagesMax)
         {
-            currTranslate += 300
-            CurrImage -= 1 
+            currTranslate -= 300
+            CurrImage += 1 
             for(i = 0; i<BlenderImagesMax; i++)
             {
                 Images[i].style.transform = `translateX(${currTranslate}px)`; 
@@ -171,26 +169,30 @@
             }
             
         }
-            
-        }
+        
+    }
+</script>
+
+<style>
+    .BlenderImage
+    {
+        width: 300px;
+        transition: 0.5s ease;
+    }
+    .BlenderSlide
+    {
+        display: flex;
+        flex-direction: row;
+        width: 300px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 0px black;
+        overflow: hidden;
+    }
+    
+
+</style>
 
 
-        function Right()
-        {
-            if(CurrImage < BlenderImagesMax)
-            {
-                currTranslate -= 300
-                CurrImage += 1 
-                for(i = 0; i<BlenderImagesMax; i++)
-                {
-                    Images[i].style.transform = `translateX(${currTranslate}px)`; 
-                    
-                }
-                
-            }
-            
-        }
-    </script>
 </div>
 </container>
 
