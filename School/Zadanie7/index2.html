@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="middle">
+            <h1 id="grade">ocena</h1>
+        </div>
+    </div>
+    
+    <script>
+        let RightValue = false;
+        let x = 1
+        let t = 'e'
+        while(RightValue == false)
+        {
+            x = prompt("podaj ocene z zakresu od 1 - 6");
+            x = Number(x)
+            if(x >=1 && x <=6)
+            {   
+                switch(x)
+                {
+                    case 1: 
+                        t = 'jeden'
+                        break;
+                        
+                    case 2: 
+                        t = "dwa"
+                        break;
+
+                    case 3: 
+                        t = "trzy"
+                        break;
+
+                    case 4: 
+                        t = "cztery"
+                        break;
+
+                    case 5: 
+                        t = "pięć"
+                        break;
+                        
+                    case 6: 
+                        t = "sześć"
+                        break;
+               }
+
+                document.getElementById("grade").innerText = "Twoja ocena to " + t;
+                RightValue = true;
+                break;
+            }
+            else
+            {
+                alert("Niepoprawna wartość ");
+            }
+            
+        }
+            
+
+
+    </script>
+
+
+
+</body>
+</html>

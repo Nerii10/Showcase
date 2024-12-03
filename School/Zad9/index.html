@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miernik Jakości Hasła</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    
+    <div class="header">
+        <h1>Sprawdź swoje hasło</h1>
+    </div>
+
+    <div class="main">
+        <div class="left">
+            <p>Wybierz</p>
+            <ol>
+                <li>
+                    <a href="index.html">Sprawdź hasło</a>
+                </li>
+                <li>
+                    <a href="zasady.html">Zasady tworzenia haseł</a>
+                </li>
+
+                </ol>
+        </div>
+        <div class="right">
+            <br>
+            <img src="haslo.png" style="width: 250px; height: 260px;">
+            <form>
+                <label for="pwd">Twoje Hasło: </label>
+                <input type="password" id="pwd" >
+                <input type="button" id="btn" value="Sprawdż" onclick="pwdCheck()">
+            </form>
+
+            <br>
+
+            <p id="wynik">Moc Hasła</p>
+        </div>
+    </div>
+
+    <div class="foot">
+        <a>Miernik Jakości hasła</a>
+
+        <P>strone opracował: Mikołaj Kozak</P>
+    </div>
+
+
+     
+    <script>
+        x = document.getElementById("pwd")
+        function pwdCheck()
+        {
+            let f = x.value.length;
+            let w = ""
+            let ContainsDigit = [...x.value].some(char => char >= '0' && char <= '9');
+            let p = document.getElementById("wynik")
+           if(f >= 7)
+           {
+                w = "dobre"
+           }
+           else if(f >= 4 && f <=6)
+           {
+                w = "średnie"
+           }
+           else
+           {
+                w = "słabe"
+           }
+
+           p.innerText= w
+        }
+    </script>
+
+
+</body>
+</html>
