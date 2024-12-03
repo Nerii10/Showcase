@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+
+
+<script>
+    IsAnimatingSearch = false;
+    IsSearchOpen = false;
+
+
+        function Search()
+        {
+        if (IsAnimatingSearch) return;
+            if(IsSearchOpen)
+            {
+                IsAnimatingSearch = true;
+                let SearchBar = document.getElementById("SearchBar")
+                let Header = document.getElementById("Header")
+                SearchBar.style.animation = "none"
+                SearchBar.offsetWidth;
+                SearchBar.style.animation = "CloseSearch 0.5s ease forwards"
+
+                Header.style.animation = "none"
+                Header.offsetWidth;
+                Header.style.animation = "HeaderFadeInShadow 0.5s  ease forwards"
+
+                SearchBar.addEventListener('animationend', () => { IsAnimatingSearch = false; IsSearchOpen = false;}, {once:true});
+            }
+            else
+            {
+                IsAnimatingSearch = true;
+                let SearchBar = document.getElementById("SearchBar")
+                SearchBar.style.animation = "none"
+                SearchBar.offsetWidth;
+                SearchBar.style.animation = "OpenUpSearch 0.5s ease forwards"
+
+                
+                Header.style.animation = "none"
+                Header.offsetWidth;
+                Header.style.animation = "HeaderFadeOutShadow 0.5s  ease forwards"
+                
+
+                SearchBar.addEventListener('animationend', () => { IsAnimatingSearch = false; IsSearchOpen = true; }, {once:true});
+            }
+        } 
+
+
+</script>
+
+<div class="Header" id="Header">
+    <div class="HeaderLeft">
+        <h3 style="margin-top: 35px; margin-left: 20px;">nerii.com</h3>
+    </div>
+
+    <div class="HeaderRight">
+        <img src="../../Resources/home.png" style="width: 80px; height: 80px; margin-top:10px; cursor:pointer" onclick="Search()">
+        <h3 style="margin-top:50px">Home</h3>
+    </div>
+
+    <div class="search" id="SearchBar">
+        <img src="../../Resources/home.png" class="logo">
+        <img src="../../Resources/Unreal.png" class="logo">
+        <img src="../../Resources/Unity.png" class="logo">
+        <img src="../../Resources/Blender.png" class="logo">
+    </div>
+</div>
+
+
+
+<br><br><br><br>
+
+<container class="center">
+<div class="main">
+
+    <h1>Climbing System</h1>
+    <hr>
+
+    <br>
+
+    <div class="Paragraph">
+        <ul>
+            <li>
+                <div class="TextBox">
+                    <h2>Summary</h2>
+                    <p>The climbing feature in a game using Unreal Engine 4 allows a character to scale vertical obstacles like walls or trees. This mechanic typically involves detecting surfaces that can be climbed and triggering appropriate animations for the character. Key elements of the climbing system include:</p>
+                </div>
+            </li>
+
+            <li>
+                <div class="TextBox">
+                    <h2>Collision Detection</h2>
+                    <p>checking if the character is near a surface that can be climbed.</p>
+                </div>
+            </li>
+
+            <li>
+                <div class="TextBox">
+                    <h2>Movement Control</h2>
+                    <p> allowing the character to move vertically along the climbable surface.</p>
+                </div>
+            </li>
+
+            <li>
+                <div class="TextBox">
+                    <h2>Gravity & Physics</h2>
+                    <p>adjusting gravity or character physics to enable smooth climbing without falling off.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+    <br><br><br><br>
+
+    <iframe src="https://blueprintue.com/render/fqni6i4_/" scrolling="no" class="blueprint" allowfullscreen="yes"></iframe>
+
+    <br><br><br><br>
+
+    <table class="Variables">
+        <tr>
+            <td style="width: 40%; text-align: left;">VariableName</td>
+            <td style="width: 60%; text-align: right;">Description</td>
+        </tr>   
+
+        <tr>
+            <td style="width: 40%; text-align: left;">
+                <div class="Variable">
+                    <div class="Float"></div>
+                    Health
+                </div>   
+            </td>
+
+            <td style="width: 60%; text-align: right;">PlayerHealth</td>
+        </tr>
+      
+
+        <tr>
+            <td style="width: 40%; text-align: left;">
+                <div class="Variable">
+                    <div class="Bool"></div>
+                    IsVisible?
+                </div>   
+            </td>
+
+            <td style="width: 60%; text-align: right;">Check If Player Is Visible</td>
+        </tr>
+
+        <tr>
+            <td style="width: 40%; text-align: left;">
+                <div class="Variable">
+                    <div class="Vector"></div>
+                    Position
+                </div>   
+            </td>
+
+            <td style="width: 60%; text-align: right;">PlayerPosition</td>
+        </tr>
+
+
+    </table>
+    
+</div>
+</container>
+
+    <br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br>
+
+</body>
+</html>
