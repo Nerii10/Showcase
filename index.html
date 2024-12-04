@@ -8,12 +8,13 @@
     <link rel="shortcut icon" href="Resources/sword5.png">
     <link rel="apple-touch-icon" href="Resources/sword5.png">
     <script src="Header.js"></script>
+    <script src="buttons.js"></script>
 </head>
 <body>
 
 <div class="Header" id="Header">
     <div class="HeaderLeft">
-        <h3 style="margin-top: 35px; margin-left: 20px;">nerii.com</h3>
+        <h3 style="margin-top: 35px; margin-left: 20px; ">nerii.com</h3>
     </div>
 
     <div class="HeaderRight">
@@ -168,18 +169,48 @@
                 <div class="TextBox">
                     <h2>School Sites (Projects)</h2>
                     <p>A website containing all of my school projects</p>
-                    <a href="School/strony.html">
-                        <input type="button" style="width: 100px; height: 25px; background-color: rgb(75, 75, 75); border-radius: 10px; border-style: none;" value="Redirect Me!">
-                    </a>
+                        <input type="button" class="button" value="Redirect Me!" id="0" onclick="buttonclick(0,'clickbutton','','School/strony.html')">
                 </div>
             </li>
         </ul>
     </div>
 
+    <div class="Paragraph">
+        <ul>
+            <li>
+                <div class="TextBox">
+                    <h2>Test Features</h2>
+                    <p>place to test new things</p>
+                        <input type="button" class="button" value="Test" id="1" onclick="buttonclick(1)">
+                        <br>
+                        <input type="button" class="button" value="Test" id="2" onclick="buttonclick(2)">
+                    </div>
+            </li>
+
+               
+
+            
+        </ul>
+    </div>
    
+
+
+
+
+
+ 
+    
+
+
     <br><br><br><br>
     <br><br><br><br>
     <br><br><br><br>
+
+
+
+
+
+
 
     </div>
 </container>
