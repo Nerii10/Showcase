@@ -102,8 +102,8 @@
 
             <li>
                 <div class="TextBox">
-                    <h2>File Formats</h2>
-                    <p>FBX,OBJ,BLEND</p>
+                    <h2>Projects</h2>
+                    <p>scroll down to se a project gallery</p>
                 </div>
             </li>
         </ul>
@@ -111,35 +111,27 @@
     
  
 
-    <hr>
-
-    <br><br>
-    
-    <div class="Paragraph">
-        <ul>
-            <li>
-                <div class="TextBox">
-                    <h2>Projects</h2>
-                    <p>Some of my projects</p>
-                </div>
-            </li>
-        </ul>
-    </div>
-
-    
+<div class="Paragraph">
+    <ul>
+        <li>
+            <div class="TextBox">
+                <h2>News</h2>
+                <p>some of the displayed items have a missing texture</p>
+            </div>
+        </li>
     <div class="ImagesSlider" >
-        <button onclick="move(1)" class="SliderButton"><</button>
+        <button onclick="move(1,'SliderImage')" class="SliderButton"><</button>
             <div class="Images">
                 <img src="Resources/Render1.png" class="SliderImage" id="1">
                 <img src="Resources/Render2.png" class="SliderImage" id="1">
                 <img src="Resources/Render3.png" class="SliderImage" id="1">
             </div>
-        <button onclick="move(2)" class="SliderButton"> ></button>
+        <button onclick="move(2,'SliderImage')" class="SliderButton"> ></button>
     </div>
+    </ul>
+</div>
 
- 
-
-    <style>
+<style>
        .ImagesSlider
        {
         display: flex;
@@ -167,22 +159,22 @@
        {
         width: 25px;
         color:white;
-        height: 100%;
+        height: 215px;
         background-color: rgba(26, 26, 26, 0.274);
         box-shadow: 0px 0px 5px 0px black;
        }
 
-    </style>
+</style>
 
 <script>
 
-    let Images = document.getElementsByClassName("SliderImage");
     let CurrImage = 1;
     let currTranslate = 0;
     ImagesMax = 3;
 
-    function move(y)
+    function move(y,x)
     {
+        let Images = document.getElementsByClassName(x);
         if(y == 1)
         {
             if(CurrImage > 1)
@@ -213,14 +205,157 @@
 </script>
 
 
+<hr>
+
+<div class="Paragraph">
+    <ul>
+        <li>
+            <div class="TextBox">
+                <h2>Gallery</h2>
+                <p>take a look</p>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
+<center>
+<div class="gallery">
+    <div>
+        <img src="Resources/test/Render1 - Copy.png" class="SliderImage" id="1">
+        <h4>test</h4>
+    </div>
+
+    <div>
+        <img src="Resources/test/Render1 - Copy.png" class="SliderImage" id="1">
+        <h4>test</h4>
+    </div>
+
+    <div>
+        <img src="Resources/test/Render1 - Copy.png" class="SliderImage" id="1">
+        <h4>test</h4>
+    </div>
+
+    <div>
+        <img src="Resources/test/Render1 - Copy.png" class="SliderImage" id="1">
+        <h4>test</h4>
+    </div>
+
+    <div>
+        <img src="Resources/test/Render1 - Copy.png" class="SliderImage" id="1">
+        <h4>test</h4>
+    </div>
+
+    <div>
+        <img src="Resources/test/Render1 - Copy.png" class="SliderImage" id="1">
+        <h4>test</h4>
+    </div>
+</div>
+</center>
+
+
+<style>
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; 
+}
+.gallery img {
+    border-radius: 5px;
+    width: 250px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); /* Dodaje cień */
+    transition: 0.5s ease;
+}
+
+.gallery img:hover {
+
+    border-radius: 15px;
+    width: 250px;
+    margin-top:-5px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.226); /* Dodaje cień */
+}
+
+
+@media only screen and (max-width: 900px) {
+    .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; 
+}
+.gallery img {
+    border-radius: 5px;
+    width: 250px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); /* Dodaje cień */
+    transition: 0.5s ease;
+}
+
+.gallery img:hover {
+
+    border-radius: 15px;
+    width: 250px;
+    margin-top:-5px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.226); /* Dodaje cień */
+}
+}
+
+@media only screen and (max-width: 750px) {
+    .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; 
+}
+.gallery img {
+    border-radius: 5px;
+    width: 200px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); /* Dodaje cień */
+    transition: 0.5s ease;
+}
+
+.gallery img:hover {
+
+    border-radius: 15px;
+    width: 200px;
+    margin-top:-5px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.226); /* Dodaje cień */
+}
+}
+@media only screen and (max-width: 600px) {
+
+    .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px; 
+}
+.gallery img {
+    border-radius: 5px;
+    width: 150px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); /* Dodaje cień */
+    transition: 0.5s ease;
+}
+
+.gallery img:hover {
+
+    border-radius: 15px;
+    width: 200px;
+    margin-top:-5px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.226); /* Dodaje cień */
+}
+
+}
+</style>
+
+
+
 
 
 </div>
 </container>
-
     <br><br><br><br>
     <br><br><br><br>
     <br><br><br><br>
-
 </body>
 </html>
