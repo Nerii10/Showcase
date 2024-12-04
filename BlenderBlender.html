@@ -106,19 +106,19 @@
                     <p>scroll down to se a project gallery</p>
                 </div>
             </li>
+
+            <li>
+                <div class="TextBox">
+                    <h2>News</h2>
+                    <p>some of the displayed items have a missing texture</p>
+                </div>
+            </li>
         </ul>
     </div>
     
  
 
-<div class="Paragraph">
-    <ul>
-        <li>
-            <div class="TextBox">
-                <h2>News</h2>
-                <p>some of the displayed items have a missing texture</p>
-            </div>
-        </li>
+
     <div class="ImagesSlider" >
         <button onclick="move(1,'SliderImage')" class="SliderButton"><</button>
             <div class="Images">
@@ -128,11 +128,44 @@
             </div>
         <button onclick="move(2,'SliderImage')" class="SliderButton"> ></button>
     </div>
-    </ul>
-</div>
-
+    <br><br>
 <style>
        .ImagesSlider
+       {
+        display: flex;
+        flex-direction: row;
+        width: 300px;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(17, 17, 17);
+        border-radius: 20px;
+       }
+       
+       .SliderImage
+       {
+        width: 250px;
+        transition: 1s ease;
+       }
+       .Images
+       {
+        width: 250px;
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        box-shadow: 0px 0px 5px 0px black;
+       }
+       .SliderButton
+       {
+        width: 25px;
+        color:white;
+        height: 215px;
+        background-color: rgba(26, 26, 26, 0.274);
+        box-shadow: 0px 0px 5px 0px black;
+       }
+      
+       
+@media only screen and (max-width: 900px) {
+    .ImagesSlider
        {
         display: flex;
         flex-direction: row;
@@ -163,6 +196,17 @@
         background-color: rgba(26, 26, 26, 0.274);
         box-shadow: 0px 0px 5px 0px black;
        }
+       
+}
+
+@media only screen and (max-width: 750px) {
+
+}
+@media only screen and (max-width: 600px) {
+    
+}
+
+
 
 </style>
 
@@ -340,10 +384,12 @@
 .gallery img:hover {
 
     border-radius: 15px;
-    width: 200px;
+    width: 155px;
     margin-top:-5px;
     box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.226); /* Dodaje cień */
 }
+
+
 
 }
 </style>
