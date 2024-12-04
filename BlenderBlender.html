@@ -122,10 +122,11 @@
     <div class="ImagesSlider" >
         <button onclick="move(1,'SliderImage')" class="SliderButton"><</button>
             <div class="Images">
-                <img src="Resources/Render1.png" class="SliderImage" id="1">
-                <img src="Resources/Render3.png" class="SliderImage" id="1">
                 <img src="Resources/Render4.png" class="SliderImage" id="1">
                 <img src="Resources/Render2.png" class="SliderImage" id="1">
+                <img src="Resources/Render3.png" class="SliderImage" id="1">
+                <img src="Resources/Render5.png" class="SliderImage" id="1">
+                <img src="Resources/Render6.png" class="SliderImage" id="1">
             </div>
         <button onclick="move(2,'SliderImage')" class="SliderButton"> ></button>
     </div>
@@ -135,7 +136,7 @@
        {
         display: flex;
         flex-direction: row;
-        width: 300px;
+        width: 387px;
         justify-content: center;
         align-items: center;
         background-color: rgb(17, 17, 17);
@@ -144,12 +145,12 @@
        
        .SliderImage
        {
-        width: 250px;
+        width: 337px;
         transition: 1s ease;
        }
        .Images
        {
-        width: 250px;
+        width: 450px;
         display: flex;
         flex-direction: row;
         overflow: hidden;
@@ -159,52 +160,22 @@
        {
         width: 25px;
         color:white;
-        height: 215px;
+        height: 195px;
         background-color: rgba(26, 26, 26, 0.274);
         box-shadow: 0px 0px 5px 0px black;
        }
       
-       
-@media only screen and (max-width: 900px) {
+       @media only screen and (max-width: 400px) {
     .ImagesSlider
        {
         display: flex;
         flex-direction: row;
-        width: 300px;
+        width: 351px;
         justify-content: center;
         align-items: center;
         background-color: rgb(17, 17, 17);
         border-radius: 20px;
        }
-       .SliderImage
-       {
-        width: 250px;
-        transition: 1s ease;
-       }
-       .Images
-       {
-        width: 250px;
-        display: flex;
-        flex-direction: row;
-        overflow: hidden;
-        box-shadow: 0px 0px 5px 0px black;
-       }
-       .SliderButton
-       {
-        width: 25px;
-        color:white;
-        height: 215px;
-        background-color: rgba(26, 26, 26, 0.274);
-        box-shadow: 0px 0px 5px 0px black;
-       }
-       
-}
-
-@media only screen and (max-width: 750px) {
-
-}
-@media only screen and (max-width: 600px) {
-    
 }
 
 
@@ -215,7 +186,7 @@
 
     let CurrImage = 1;
     let currTranslate = 0;
-    ImagesMax = 4;
+    ImagesMax = 5;
 
     function move(y,x)
     {
@@ -224,7 +195,7 @@
         {
             if(CurrImage > 1)
             {
-                currTranslate += 250
+                currTranslate += 337
                 CurrImage -= 1 
                     for(i = 0; i<ImagesMax; i++)
                     {
@@ -237,7 +208,7 @@
         {
             if(CurrImage < ImagesMax)
                 {
-                    currTranslate -= 250
+                    currTranslate -= 337
                     CurrImage += 1 
                     for(i = 0; i<ImagesMax; i++)
                     {
@@ -267,33 +238,33 @@
 <center>
 <div class="gallery">
     <div>
-        <img src="Resources/test/Render1 - Copy.png" class="SliderImage" id="1">
-        <h4>test</h4>
+        <img src="Resources/Render1.png" class="SliderImage" id="1">
+        <h4>RandomProps</h4>
     </div>
 
     <div>
-        <img src="Resources/test/Render1 - Copy.png" class="SliderImage" id="1">
-        <h4>test</h4>
+        <img src="Resources/Render2.png" class="SliderImage" id="1">
+        <h4>AR Model</h4>
     </div>
 
     <div>
-        <img src="Resources/test/Render1 - Copy.png" class="SliderImage" id="1">
-        <h4>test</h4>
+        <img src="Resources/Render3.png" class="SliderImage" id="1">
+        <h4>Doors</h4>
     </div>
 
     <div>
-        <img src="Resources/test/Render1 - Copy.png" class="SliderImage" id="1">
-        <h4>test</h4>
+        <img src="Resources/Render4.png" class="SliderImage" id="1">
+        <h4>AR Model 2</h4>
     </div>
 
     <div>
-        <img src="Resources/test/Render1 - Copy.png" class="SliderImage" id="1">
-        <h4>test</h4>
+        <img src="Resources/Render5.png" class="SliderImage" id="1">
+        <h4>Mug</h4>
     </div>
 
     <div>
-        <img src="Resources/test/Render1 - Copy.png" class="SliderImage" id="1">
-        <h4>test</h4>
+        <img src="Resources/Render6.png" class="SliderImage" id="1">
+        <h4>PlanterBox</h4>
     </div>
 </div>
 </center>
