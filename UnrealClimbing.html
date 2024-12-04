@@ -7,53 +7,10 @@
     <link rel="shortcut icon" href="Resources/Unreal.png">
     <link rel="apple-touch-icon" href="Resources/Unreal.png">
     <link rel="stylesheet" href="css.css">
+    <script src="Header.js"></script>
 </head>
 <body>
 
-
-<script>
-    IsAnimatingSearch = false;
-    IsSearchOpen = false;
-
-
-        function Search()
-        {
-        if (IsAnimatingSearch) return;
-            if(IsSearchOpen)
-            {
-                IsAnimatingSearch = true;
-                let SearchBar = document.getElementById("SearchBar")
-                let Header = document.getElementById("Header")
-                SearchBar.style.animation = "none"
-                SearchBar.offsetWidth;
-                SearchBar.style.animation = "CloseSearch 0.5s ease forwards"
-
-                Header.style.animation = "none"
-                Header.offsetWidth;
-                Header.style.animation = "HeaderFadeInShadow 0.5s  ease forwards"
-
-                SearchBar.addEventListener('animationend', () => { IsAnimatingSearch = false; IsSearchOpen = false;}, {once:true});
-            }
-            else
-            {
-                IsAnimatingSearch = true;
-                let SearchBar = document.getElementById("SearchBar")
-                SearchBar.style.animation = "none"
-                SearchBar.offsetWidth;
-                SearchBar.style.animation = "OpenUpSearch 0.5s ease forwards"
-
-                
-                Header.style.animation = "none"
-                Header.offsetWidth;
-                Header.style.animation = "HeaderFadeOutShadow 0.5s  ease forwards"
-                
-
-                SearchBar.addEventListener('animationend', () => { IsAnimatingSearch = false; IsSearchOpen = true; }, {once:true});
-            }
-        } 
-
-
-</script>
 
 <div class="Header" id="Header">
     <div class="HeaderLeft">

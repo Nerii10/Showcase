@@ -2,11 +2,15 @@ html, body {
     height: 100%; 
     margin: 0; 
     padding: 0; 
-    background-color: #0d0d0d;
     font-family: consolas;
     color: white;
     scroll-behavior: smooth;
     scrollbar-width: none;
+}
+html
+{
+    background-color: #0d0d0d;
+
 }
 body {
     display: flex;
