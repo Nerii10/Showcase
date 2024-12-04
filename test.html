@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pobieranie tekstu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ccc;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tekst ze strony</h1>
+    <div id="content">Ładowanie...</div>
+
+    <script>
+        const proxyUrl = "https://cors-anywhere.herokuapp.com/";
+        const targetUrl = "https://zastepstwa.zse.bydgoszcz.pl";
+
+        // Pobieranie danych z innej strony
+        fetch(proxyUrl + targetUrl)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(html => {
+                // Tworzenie DOM z odpowiedzi HTML
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+
+                // Pobranie całego tekstu strony
+                const textContent = doc.body.innerText;
+
+                // Wyświetlenie tekstu na stronie
+                const contentDiv = document.getElementById('content');
+                contentDiv.innerHTML = `<pre>${textContent}</pre>`;
+            })
+            .catch(error => {
+                console.error('Wystąpił błąd:', error);
+                document.getElementById('content').innerText = "Nie udało się pobrać tekstu.";
+            });
+    </script>
+</body>
+</html>
