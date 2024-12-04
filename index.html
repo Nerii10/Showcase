@@ -94,42 +94,11 @@
 <center>
     <div  class="Slider">
         <div class="Images">
-
             <img src="Resources/sword2.png" class="Image">
-            <img src="Resources/sword4.png" class="Image">
         </div>
     </div>
 </center>   
 
-<script>
-    let Images = document.getElementsByClassName("Image");
-    let currTranslate = 0;
-    let b = 1
-    
-    setInterval(move, 10000); // Wywołuj funkcję co 1 sekundę
-
-    function move() {
-        if(b == 1)
-        {
-            b=2
-            currTranslate -= 100; // Przesuwamy w lewo o 100px (lub zmień na inną wartość)
-            for (let i = 0; i < Images.length; i++) 
-            { // Iteruj po wszystkich obrazach
-                Images[i].style.transform = `translateX(${currTranslate}%)`; 
-            }
-        }
-        else
-        {
-            b=1
-            currTranslate += 100; // Przesuwamy w lewo o 100px (lub zmień na inną wartość)
-            for (let i = 0; i < Images.length; i++) 
-            { // Iteruj po wszystkich obrazach
-                Images[i].style.transform = `translateX(${currTranslate}%)`; 
-            }
-        }
-        
-    }
-</script>
 
 <style>
     .Slider
