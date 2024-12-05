@@ -641,7 +641,7 @@ h1 {
     display: flex; 
     bottom: 0;
     background-color: #111111; 
-    flex-direction: column;
+    flex-direction: row;
     width: 100%; 
     z-index: 4; 
     padding-bottom: 5px;
