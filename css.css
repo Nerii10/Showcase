@@ -542,10 +542,10 @@ h1 {
 
   @media only screen and (max-width:400px) {
     
-.gif3
-{
-    filter:brightness(30%);
-    width: 50px;
-}
+    .gif3
+    {
+        filter:brightness(31%);
+        width: 130px;
+    }
 
   }
