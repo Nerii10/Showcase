@@ -508,4 +508,21 @@ h1 {
     margin-top:20px;
     border-color: aqua;
 }
+
+.gif3
+{
+    filter:brightness(30%);
+    width: 150px;
+}
+
+  }
+
+  @media only screen and (max-width:400px) {
+    
+.gif3
+{
+    filter:brightness(30%);
+    width: 120px;
+}
+
   }
