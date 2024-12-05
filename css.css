@@ -183,7 +183,12 @@ body {
     width: 100%;
     text-align: center;
 }
-
+.footerLeftMiddle
+{
+    display: flex;
+    flex-direction: row;
+    
+}
 /*Text Elements*/
 
 .Paragraph
@@ -641,13 +646,18 @@ h1 {
     display: flex; 
     bottom: 0;
     background-color: #111111; 
-    flex-direction: row;
+    flex-direction: column;
     width: 100%; 
     z-index: 4; 
     padding-bottom: 5px;
     box-shadow: 0px 0px 30px black 
 }
-
+.footerLeftMiddle
+{
+    display: flex;
+    flex-direction: row;
+    
+}
   }
 
   @media only screen and (max-width:400px) {
