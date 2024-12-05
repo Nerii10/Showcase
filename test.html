@@ -1,54 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pobieranie tekstu</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        pre {
-            background: #f4f4f4;
-            padding: 10px;
-            border: 1px solid #ccc;
-            overflow: auto;
-        }
-    </style>
-</head>
-<body>
-    <h1>Tekst ze strony</h1>
-    <div id="content">Ładowanie...</div>
+import React, { useState } from 'react';
 
-    <script>
-        const proxyUrl = "https://cors-anywhere.herokuapp.com/";
-        const targetUrl = "https://nerii10.github.io/site/BlenderBlender.html";
+function TodoApp() {
+  const [tasks, setTasks] = useState([]);
+  const [task, setTask] = useState('');
 
-        // Pobieranie danych z innej strony
-        fetch(proxyUrl + targetUrl)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! Status: ${response.status}`);
-                }
-                return response.text();
-            })
-            .then(html => {
-                // Tworzenie DOM z odpowiedzi HTML
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(html, 'text/html');
+  const handleAddTask = () => {
+    if (task) {
+      setTasks([...tasks, task]);
+      setTask('');
+    }
+  };
 
-                // Pobranie całego tekstu strony
-                const textContent = doc.body.innerText;
+  const handleRemoveTask = (index) => {
+    const newTasks = tasks.filter((_, i) => i !== index);
+    setTasks(newTasks);
+  };
 
-                // Wyświetlenie tekstu na stronie
-                const contentDiv = document.getElementById('content');
-                contentDiv.innerHTML = `<pre>${textContent}</pre>`;
-            })
-            .catch(error => {
-                console.error('Wystąpił błąd:', error);
-                document.getElementById('content').innerText = "Nie udało się pobrać tekstu.";
-            });
-    </script>
-</body>
-</html>
+  return (
+    <div>
+      <h1>To-Do List</h1>
+      <input
+        type="text"
+        value={task}
+        onChange={(e) => setTask(e.target.value)}
+        placeholder="Add a new task"
+      />
+      <button onClick={handleAddTask}>Add Task</button>
+      <ul>
+        {tasks.map((task, index) => (
+          <li key={index}>
+            {task} <button onClick={() => handleRemoveTask(index)}>Delete</button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default TodoApp;
