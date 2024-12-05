@@ -29,6 +29,7 @@ html, body {
     color: white;
     scroll-behavior: smooth;
     scrollbar-width: none;
+    animation: Open 1s ease;
 }
 html
 {
@@ -134,6 +135,54 @@ body {
 {
     text-decoration: none;
 }
+.footerLeft
+{
+    padding: 20px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    gap: 5px; 
+    text-align: center;
+    width: 10%;
+}
+
+.footerMiddle
+{
+    padding: 20px; 
+    width: 40%;
+}
+.footerRight
+{
+    width: 40%;
+    padding: 20px;
+}
+.footer
+{
+    gap:20px;
+    display: flex; 
+    bottom: 0;
+    background-color: #111111; 
+    width: 100%; 
+    z-index: 4; 
+    padding-bottom: 5px;
+    box-shadow: 0px 0px 30px black 
+}
+
+.footerRight h3
+{
+    width: 100%;
+    text-align: center;
+}
+.footerMiddle h3
+{
+    width: 100%;
+    text-align: center;
+}
+.footerLeft h3
+{
+    width: 100%;
+    text-align: center;
+}
 
 /*Text Elements*/
 
@@ -144,7 +193,21 @@ body {
     padding: 20px;
 }
 
+.Ahref
+{
+    color:gray;
+    transition: 0.5s ease;
+    width:fit-content;
+    text-transform: uppercase; 
+    text-decoration: none; 
+    letter-spacing: 2px;
+}
+.Ahref:hover
+{
+    transform:scale(1.2);
+}
 p
+
 {
     color:gray;
 }
@@ -414,7 +477,16 @@ tr:nth-child(even)
 }
 
 
-
+@keyframes Open
+{
+    0%{
+        filter:saturate(0%);
+        
+    }
+    100%{
+        filter:saturate(100%);
+    }
+}
 
 
 
@@ -448,6 +520,8 @@ tr:nth-child(even)
     position: fixed;
     left: 0; 
 }
+
+
 }
 
 @media only screen and (max-width: 750px) {
@@ -536,6 +610,42 @@ h1 {
 {
     filter:brightness(31%);
     width: 150px;
+}
+
+.footerLeft
+{
+    display: flex; 
+    flex-direction: column; 
+    gap: 5px; 
+    text-align: center;
+    width: 90%;
+    padding: 0px;
+}
+
+.footerMiddle
+{
+    padding: 0px;
+    width: 90%;
+
+}
+
+.footerRight
+{
+    padding: 0px;
+        width: 90%;
+}
+.footer
+{
+    align-items: center;
+    gap:50px;
+    display: flex; 
+    bottom: 0;
+    background-color: #111111; 
+    flex-direction: column;
+    width: 100%; 
+    z-index: 4; 
+    padding-bottom: 5px;
+    box-shadow: 0px 0px 30px black 
 }
 
   }
