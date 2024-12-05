@@ -143,13 +143,13 @@ body {
     align-items: center;
     gap: 5px; 
     text-align: center;
-    width: 10%;
+    width: 20%;
 }
 
 .footerMiddle
 {
     padding: 20px; 
-    width: 40%;
+    width: 80%;
 }
 .footerRight
 {
@@ -187,7 +187,7 @@ body {
 {
     display: flex;
     flex-direction: row;
-    
+    width:50%;
 }
 /*Text Elements*/
 
