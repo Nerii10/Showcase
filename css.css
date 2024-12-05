@@ -1,8 +1,13 @@
+@font-face {
+    font-family: 'CONSOLA';
+    src: url('Resources/CONSOLAB.ttf') format('truetype');
+}
+
 html, body {
     height: 100%; 
     margin: 0; 
     padding: 0; 
-    font-family: consolas;
+    font-family: 'CONSOLA', monospace;   
     color: white;
     scroll-behavior: smooth;
     scrollbar-width: none;
