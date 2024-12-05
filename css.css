@@ -229,7 +229,11 @@ hr {
     border-radius: 10px;
 }
 
-
+.gif3
+{
+    filter:brightness(30%);
+    width: 200px;
+}
 
 /*Variables*/
 
