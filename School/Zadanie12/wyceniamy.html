@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malarz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+        <div class="header">
+            <a href="index.html">Koszty farby</a>
+
+        </div>
+
+
+        <div class="main">
+            <div class="mainLeft" style="display: flex; flex-direction: column;">
+                <h1>Mieszamy czy wyceniamy?</h1>
+                <a href="mieszamy.html">Mieszamy</a>
+                <a href="wyceniamy.html">Wyceniamy </a>
+
+            </div>
+
+            <div class="mainRight">
+                <h2>Obliczanie na podstawie powierzchni zapotrzebowania na farbe</h2>
+                <labe for="text">Podaj Powierzchnie</label>
+                <input type="text" id="text">
+                <input type="button" id="button" value="Policz" onclick="wyn()">
+                <p id="wynik">Liczba jednolitrowych puszek farby potrzebnych do pomalowania wynosi: 1</p>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <p>MALARZ</p>
+            <p>Strone opracował: Mikołaj kozak</p>
+        </div>
+
+<script>
+
+function wyn()
+{
+    let txt = document.getElementById("text").value
+    let wyn = document.getElementById("wynik")
+
+    wyn.innerText = "Liczba jednolitrowych puszek farby potrzebnych do pomalowania wynosi: " + Math.ceil(txt/4)
+}
+    
+</script>
+
+
+</body>
+</html>
